@@ -13,11 +13,11 @@ services:
       default:
         ipv4_address: 172.16.238.10
   backend_php:
-    build: ./backend
+    build: ./php
     ports:
       - "9015:9015"
     volumes:
-      - "./backend/src:/var/www/html"
+      - "./php/src:/var/www/html"
       - "~/.ssh:/root/.ssh"
     tty: true
     networks:
